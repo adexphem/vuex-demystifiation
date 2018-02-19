@@ -1,7 +1,7 @@
 <template>
     <div id="app">
         <div id="product-list-one">
-            <h2>Product List One</h2>
+            <h2>Movie Ticket Cost</h2>
 
             <ul>
                 <li v-for="product in salesProducts">
