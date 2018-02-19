@@ -24,7 +24,7 @@
 
 <style>
     body {
-        font-family: Ubuntu;
+        font-family: 'Montserrat-Light';
         color: #555;
     }
 </style>
