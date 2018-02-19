@@ -31,11 +31,7 @@
     },
     methods: {
       reducedPrice () {
-        /*this.$store.state.products.forEach(product => {
-          product.price -= 1
-        })*/
-
-        this.$store.commit('priceReducers')
+        this.$store.dispatch('priceReducers') // dispatch is used when calling actions from store
       }
     }
   }

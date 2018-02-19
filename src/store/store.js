@@ -29,5 +29,12 @@ export const store = new Vuex.Store({
         product.price -= 1
       })
     }
+  },
+  actions: { // overcomes the
+    priceReducers: context => {
+      setTimeout(function () {
+        context.commit('priceReducers') // priceReducers here is the one on mutations
+      }, 2000)
+    }
   }
 })
