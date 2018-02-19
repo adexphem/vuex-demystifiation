@@ -9,19 +9,33 @@
                     <span class="price">₦{{ product.price}}</span>
                 </li>
             </ul>
+
+            <div class="cta">
+                Price Reducers
+                <button v-on:click="reducedPrice">Try It</button>
+            </div>
         </div>
     </div>
 </template>
 
 <script>
   export default {
-    name: 'app',
+    name: 'product-list-one',
     computed: {
       products () {
         return this.$store.state.products
       },
       salesProducts () {
         return this.$store.state.products
+      }
+    },
+    methods: {
+      reducedPrice () {
+        /*this.$store.state.products.forEach(product => {
+          product.price -= 1
+        })*/
+
+        this.$store.commit('priceReducers')
       }
     }
   }
@@ -33,6 +47,8 @@
         box-shadow: 1px 2px 3px rgba(0,0,0,0.2);
         margin-bottom: 30px;
         padding: 10px 20px;
+        width: 100%;
+        text-align: center;
 
         ul {
             padding: 0;
@@ -49,6 +65,16 @@
         .price {
             font-weight: bold;
             color: #E8800C;
+        }
+
+        .cta {
+            width: 100%;
+            text-align: center;
+
+            button {
+                padding: 10px 15px;
+                font-size: 13px;
+            }
         }
     }
 </style>

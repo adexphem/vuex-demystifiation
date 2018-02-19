@@ -15,7 +15,7 @@
 
 <script>
   export default {
-    name: 'app',
+    name: 'product-list-two',
     data() {
       return {}
     },
