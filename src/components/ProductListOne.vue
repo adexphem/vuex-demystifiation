@@ -12,7 +12,7 @@
 
             <div class="cta">
                 Price Reducers
-                <button v-on:click="reducedPrice">Try It</button>
+                <button v-on:click="reducedPrice(4)">Try It</button>
             </div>
         </div>
     </div>
@@ -30,8 +30,8 @@
       }
     },
     methods: {
-      reducedPrice () {
-        this.$store.dispatch('priceReducers') // dispatch is used when calling actions from store
+      reducedPrice (amt) {
+        this.$store.dispatch('priceReducers', amt) // dispatch is used when calling actions from store
       }
     }
   }
